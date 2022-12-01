@@ -1,7 +1,7 @@
 resource "aws_security_group" "Public-web_SG" {
   name        = "Public-web_SG"
   description = "Allow port 80 form self ip"
-  vpc_id      = [aws_vpc.abhi134.id]
+  vpc_id      = aws_vpc.abhi134.id
 
   ingress {
     description      = "HTTP"
