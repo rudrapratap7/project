@@ -15,7 +15,7 @@ resource "aws_instance" "Jenkins" {
 
   ami                    = "ami-0149b2da6ceec4bb0"
   instance_type          = "t3.small"
-  security_groups        = [aws_security_group.private-SG.name]
+  security_groups        = [aws_security_group.private_SG.name]
   key_name               = "abhi"
 
   tags = {
