@@ -7,7 +7,7 @@ resource "aws_security_group" "bastion-host134_SG" {
     description      = "ssh from bastion"
     from_port        = 22
     to_port          = 22
-    protocol         = "-1"
+    protocol         = "SSH"
     cidr_blocks      = ["49.43.42.187/32"]
   }
 
