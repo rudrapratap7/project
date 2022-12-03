@@ -1,6 +1,6 @@
 resource "aws_security_group" "private_SG" {
 
- name        = "private_SG"
+ name        = "private_sg"
   description = "Allow all inbound traffic withn vpc"
   vpc_id      = aws_vpc.abhi134.id
 
