@@ -7,7 +7,7 @@ resource "aws_security_group" "Public-web_SG" {
     description      = "HTTP"
     from_port        = 80
     to_port          = 80
-    protocol         = "http"
+    protocol         = "tcp"
     cidr_blocks      = ["49.43.42.187/32"]
 
   }
