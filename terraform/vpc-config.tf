@@ -121,8 +121,14 @@ resource "aws_route_table" "abhi134-public-route" {
 }
 
 
-resource "aws_default_route_table" "abhi134-default-route" {
-  default_route_table_id = "${aws_vpc.abhi134.default_route_table_id}"
+resource "aws_default_route_table" "abhi134-private-route" {
+  private_route_table_id = "${aws_vpc.abhi134.private_route_table_id}" 
+  route {
+      cidr_block = "0.0.0.0/0"
+      gateway_id = "${aws_internet_gateway.abhi134_igw.id}"
+  }
+  
+  
   tags = {
       Name = "abhi134-default-route"
   }
